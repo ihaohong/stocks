@@ -1,5 +1,6 @@
-package com;
+package com.mappers;
 
+import com.models.City;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 
