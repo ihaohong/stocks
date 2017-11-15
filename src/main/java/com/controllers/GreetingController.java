@@ -1,7 +1,9 @@
 package com.controllers;
 
+import com.mappers.UserMapper;
 import com.models.City;
 import com.mappers.CityMapper;
+import com.models.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,6 +17,9 @@ public class GreetingController {
     @Autowired
     private CityMapper cityMapper;
 
+    @Autowired
+    private UserMapper userMapper;
+
     @RequestMapping("/greeting")
     public String greeting(@RequestParam(value="name", defaultValue="World") String name, Model model) {
         model.addAttribute("name", name);
@@ -27,6 +32,14 @@ public class GreetingController {
         model.addAttribute("city", cityEntity);
 
         return "city";
+    }
+
+    @RequestMapping("/user")
+    public String user(@RequestParam(value="username") String username, Model model) {
+        User user = userMapper.findByUsername(username);
+        System.out.println(user);
+
+        return "home";
     }
 
 }
