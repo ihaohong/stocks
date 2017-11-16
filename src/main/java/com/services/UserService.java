@@ -28,4 +28,15 @@ public class UserService implements UserDetailsService {
                 Collections.singleton(new SimpleGrantedAuthority(loginUser.getRole()))
         );
     }
+
+    public User registerUser(String username, String password) {
+        User user = new User();
+        user.setUsername(username);
+        user.setPassword(password);
+        user.setRole("ROLE_ADMIN");
+
+        userMapper.insertUser(user);
+
+        return user;
+    }
 }
