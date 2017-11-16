@@ -20,9 +20,12 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
+        // 临时移除
+        http.csrf().disable();
+
         http
             .authorizeRequests()
-                .antMatchers("/", "/home").permitAll()
+                .antMatchers("/", "/home", "/register").permitAll()
                 .anyRequest().authenticated()
                 .and()
             .formLogin()
@@ -39,12 +42,5 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .eraseCredentials(true)
                 .userDetailsService(userService())
                 .passwordEncoder(new StandardPasswordEncoder());
-        //        auth
-//            .inMemoryAuthentication()
-//                .withUser("user").password("password").roles("USER");
-//
-//        auth
-//                .inMemoryAuthentication()
-//                .withUser("haohong725").password("huaerjie001").roles("USER");
     }
 }
