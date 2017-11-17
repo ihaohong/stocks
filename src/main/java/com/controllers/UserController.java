@@ -30,8 +30,6 @@ public class UserController {
     public String register(@Valid RegisterForm registerForm, Errors errors, Model model) {
         User user = userService.registerUser(registerForm.getUsername(), registerForm.getPassword());
 
-        System.out.println(user);
-
         return "test";
     }
 }
