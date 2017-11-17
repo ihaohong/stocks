@@ -18,7 +18,7 @@
     <select id="findByUsername" resultType="User">
         SELECT id, username, password, role FROM users WHERE username = #{username} LIMIT 1
     </select>
-    <insert id="insertUser" parameterType="com.models.User">
-      INSERT INTO users(username, password, role) VALUES(#{username}, #{password}, #{role})
+    <insert id="insertUser" useGeneratedKeys="true" keyProperty="id" parameterType="com.models.User">
+        INSERT INTO users(username, password, role) VALUES(#{username}, #{password}, #{role})
     </insert>
 </mapper>
