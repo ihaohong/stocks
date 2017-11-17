@@ -36,7 +36,7 @@ public class UserService implements UserDetailsService {
         User user = new User();
         user.setUsername(username);
         user.setPassword(encodedPassword);
-        user.setRole("ROLE_ADMIN");
+        user.setRole("ROLE_USER");
 
         userMapper.insertUser(user);
 
