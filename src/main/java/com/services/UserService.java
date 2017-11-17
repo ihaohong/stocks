@@ -7,6 +7,7 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.password.StandardPasswordEncoder;
 
 import java.util.Collections;
 
@@ -30,9 +31,11 @@ public class UserService implements UserDetailsService {
     }
 
     public User registerUser(String username, String password) {
+        String encodedPassword = new StandardPasswordEncoder().encode(password);
+
         User user = new User();
         user.setUsername(username);
-        user.setPassword(password);
+        user.setPassword(encodedPassword);
         user.setRole("ROLE_ADMIN");
 
         userMapper.insertUser(user);
