@@ -11,15 +11,14 @@
        See the License for the specific language governing permissions and
        limitations under the License.
 -->
-<!DOCTYPE configuration
-        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
-        "http://mybatis.org/dtd/mybatis-3-config.dtd">
-<configuration>
-    <typeAliases>
-        <package name="com.models"/>
-    </typeAliases>
-    <mappers>
-        <mapper resource="mybatis/mappers/CityMapper.xml"/>
-        <mapper resource="mybatis/mappers/UserMapper.xml"/>
-    </mappers>
-</configuration>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mappers.UserMapper">
+    <select id="findByUsername" resultType="User">
+        SELECT id, username, password, role FROM users WHERE username = #{username} LIMIT 1
+    </select>
+    <insert id="insertUser" parameterType="com.models.User">
+      INSERT INTO users(username, password, role) VALUES(#{username}, #{password}, #{role})
+    </insert>
+</mapper>
