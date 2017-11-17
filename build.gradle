@@ -36,7 +36,7 @@ dependencies {
     compile("org.mybatis.spring.boot:mybatis-spring-boot-starter:1.3.1")
 
     // utils
-    compile 'org.projectlombok:lombok:1.16.6'
+    compile('org.projectlombok:lombok:1.16.6')
 
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }

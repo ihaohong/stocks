@@ -4,6 +4,8 @@ import com.mappers.UserMapper;
 import com.models.City;
 import com.mappers.CityMapper;
 import com.models.User;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -20,9 +22,17 @@ public class GreetingController {
     @Autowired
     private UserMapper userMapper;
 
+    private final Logger logger = LoggerFactory.getLogger(this.getClass());
+
     @RequestMapping("/greeting")
     public String greeting(@RequestParam(value="name", defaultValue="World") String name, Model model) {
         model.addAttribute("name", name);
+
+        logger.debug("This is a debug message");
+        logger.info("This is an info message");
+        logger.warn("This is a warn message");
+        logger.error("This is an error message");
+
         return "greeting";
     }
 
