@@ -1,8 +1,10 @@
 # 自选股
 
-- java
-- spring boot
-- mybatis
+- Java
+- SpringBoot
+- Mybatis
+- BootStrap
+- AdminLTE
 
 ## ToDo
 - Unit Test
