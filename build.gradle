@@ -21,6 +21,11 @@ repositories {
     mavenCentral()
 }
 
+// 自动加载静态资源
+bootRun {
+    addResources = true
+}
+
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
