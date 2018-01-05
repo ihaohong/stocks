@@ -40,3 +40,4 @@
 * [Spring Boot 入门](http://tengj.top/2017/02/26/springboot1/)
 * [Spring Boot 参考指南](https://qbgbook.gitbooks.io/spring-boot-reference-guide-zh/content/)
 * [新一代Java模板引擎Thymeleaf](https://www.tianmaying.com/tutorial/using-thymeleaf)
+* [Spring Boot静态资源处理](https://www.jianshu.com/p/d127c4f78bb8)
