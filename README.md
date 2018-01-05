@@ -21,7 +21,7 @@
 * 订阅文章
 * Spring Cloud
 * Docker
-* Durid
+* Druid
 
 ## 业务参考
 * [雪球](https://xueqiu.com)
