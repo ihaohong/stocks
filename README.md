@@ -31,6 +31,7 @@
 * [Thymeleaf layout 布局](https://www.jianshu.com/p/db16d4d8d9c7)
 * [纯洁的微笑](http://www.ityouknow.com/spring-boot.html),一个不错的SpringBoot入门博客
 * [Spring Boot 揭秘与实战 系列](http://blog.720ui.com/columns/springboot_all/)
+* [开发常用的热部署方式汇总](https://juejin.im/post/5a49fb685188252bca0536e2)
 * [Spring Boot使用单元测试](http://tengj.top/2017/12/28/springboot12/)
 * [Spring Boot整合Mybatis通用Mapper插件](http://tengj.top/2017/12/20/springboot11/)
 * [SQL关系型数据库之MyBatis的使用](http://tengj.top/2017/04/23/springboot9/)
