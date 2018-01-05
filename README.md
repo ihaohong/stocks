@@ -23,7 +23,7 @@
 * Docker
 
 ## 业务参考
-* 雪球
+* [雪球](https://xueqiu.com)
 
 
 ## 参考文档
@@ -37,3 +37,5 @@
 * [开发Web应用之Thymeleaf篇](http://tengj.top/2017/03/13/springboot4/)
 * [Spring Boot 启动原理解析](http://tengj.top/2017/03/09/springboot3/)
 * [Spring Boot 入门](http://tengj.top/2017/02/26/springboot1/)
+* [Spring Boot 参考指南](https://qbgbook.gitbooks.io/spring-boot-reference-guide-zh/content/)
+* [新一代Java模板引擎Thymeleaf](https://www.tianmaying.com/tutorial/using-thymeleaf)
