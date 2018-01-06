@@ -42,3 +42,4 @@
 * [Spring Boot 参考指南](https://qbgbook.gitbooks.io/spring-boot-reference-guide-zh/content/)
 * [新一代Java模板引擎Thymeleaf](https://www.tianmaying.com/tutorial/using-thymeleaf)
 * [Spring Boot静态资源处理](https://www.jianshu.com/p/d127c4f78bb8)
+* [深入 Spring 系列之静态资源处理(webjars)](https://blog.coding.net/blog/spring-static-resource-process)

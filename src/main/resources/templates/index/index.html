@@ -1,13 +1,19 @@
 <html>
     <head>
         <title>test</title>
-        <link rel='stylesheet' type='text/css' th:href="@{/styles/index.css}" />
+        <!--<link rel='stylesheet' type='text/css' th:href="@{/styles/index.css}" />-->
+        <link rel='stylesheet' href='/webjars/bootstrap/3.3.7/dist/css/bootstrap.min.css' />
+        <link rel="stylesheet" href="/webjars/AdminLTE/2.4.2/dist/css/AdminLTE.min.css" />
+        <link rel="stylesheet" href="/webjars/AdminLTE/2.4.2/dist/css/skins/_all-skins.min.css" />
     </head>
     <body>
         <h1>
-            this is index html
+            this is index html<p th:text="${foo}"></p>
         </h1>
 
         <script th:src="@{/scripts/index.js}"></script>
+        <script src="/webjars/jquery/3.2.1/dist/jquery.min.js"></script>
+        <script src="/webjars/bootstrap/3.3.7/dist/js/bootstrap.min.js"></script>
+        <script src="/webjars/adminlte/2.4.2/dist/js/adminlte.min.js"></script>
     </body>
 </html>

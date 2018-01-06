@@ -1,9 +1,15 @@
 buildscript {
     repositories {
-        mavenCentral()
+        maven{ url 'http://maven.aliyun.com/nexus/content/groups/public/'}
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.8.RELEASE")
+    }
+}
+
+allprojects {
+    repositories {
+        maven{ url 'http://maven.aliyun.com/nexus/content/groups/public/'}
     }
 }
 
@@ -35,6 +41,13 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-thymeleaf")
     compile("org.springframework.boot:spring-boot-devtools")
     compile("org.springframework.boot:spring-boot-starter-security")
+
+
+    // webjars
+    compile("org.webjars.npm:jquery:3.2.1")
+    compile("org.webjars.bower:fontawesome:4.7.0")
+    compile("org.webjars.bower:bootstrap:3.3.7")
+    compile("org.webjars:AdminLTE:2.4.2")
 
     // db
     compile("mysql:mysql-connector-java:+")
