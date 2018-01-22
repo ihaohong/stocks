@@ -9,12 +9,14 @@ import static org.springframework.web.bind.annotation.RequestMethod.GET;
 
 @RestController
 public class StockController {
-    @RequestMapping(value = "/stock/index/{code}", method = {GET})
-    public StockIndex stockIndex(@PathVariable String code) {
+    @RequestMapping(value = "/stock/index/{codes:[\\d|,]+}", method = {GET})
+    public StockIndex[] stockIndexList(@PathVariable String codes) {
         StockIndex si = new StockIndex();
-        si.setCode(code);
+        si.setCode(codes);
         si.setIndex(22L);
+        si.setName("沪深300");
 
-        return si;
+        StockIndex[] stockIndices = {si};
+        return stockIndices;
     }
 }
