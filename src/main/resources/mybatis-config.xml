@@ -19,6 +19,7 @@
         <package name="com.models"/>
     </typeAliases>
     <mappers>
-        <mapper resource="mybatis/mappers/UserMapper.xml"/>
+        <mapper resource="mybatis/mappers/UserMapper.xml" />
+        <mapper resource="mybatis/mappers/StockIndexMapper.xml" />
     </mappers>
 </configuration>
