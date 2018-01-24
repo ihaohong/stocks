@@ -3,10 +3,9 @@ package com.services;
 import com.mappers.StockIndexMapper;
 import com.models.StockIndex;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-/**
- * Created by haohong on 24/01/2018.
- */
+@Service
 public class StockIndexService {
     @Autowired
     private StockIndexMapper stockIndexMapper;
