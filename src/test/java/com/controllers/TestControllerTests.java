@@ -31,4 +31,9 @@ public class TestControllerTests {
                 .andExpect(status().isOk())
                 .andExpect(content().string(equalTo("Hello World")));
     }
+
+    @Test
+    public void testTest() {
+        assert false;
+    }
 }
