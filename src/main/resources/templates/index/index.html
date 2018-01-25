@@ -24,7 +24,7 @@
                         <!-- small box -->
                         <div class="small-box bg-aqua">
                             <div class="inner">
-                                <h3>150</h3>
+                                <h3 id="index_000001">150</h3>
 
                                 <p>上证指数</p>
                             </div>
@@ -39,7 +39,7 @@
                         <!-- small box -->
                         <div class="small-box bg-green">
                             <div class="inner">
-                                <h3>53<sup style="font-size: 20px">%</sup></h3>
+                                <h3 id="index_000300">53<sup style="font-size: 20px">%</sup></h3>
 
                                 <p>沪深300</p>
                             </div>
@@ -54,7 +54,7 @@
                         <!-- small box -->
                         <div class="small-box bg-yellow">
                             <div class="inner">
-                                <h3>44</h3>
+                                <h3 id="index_000905">44</h3>
 
                                 <p>中证500</p>
                             </div>
@@ -69,7 +69,7 @@
                         <!-- small box -->
                         <div class="small-box bg-red">
                             <div class="inner">
-                                <h3>65</h3>
+                                <h3 id="index_399006">65</h3>
 
                                 <p>创业板指</p>
                             </div>
@@ -134,7 +134,12 @@
 
         <div layout:fragment="scripts" >
             <script type='text/javascript'>
-                alert('xx');
+                $.get("/stock/index/000001,000300,399006,000905", function (data, status) {
+                    $("#index_000001").text(data.data.code_000001.close);
+                    $("#index_000300").text(data.data.code_000300.close);
+                    $("#index_399006").text(data.data.code_399006.close);
+                    $("#index_000905").text(data.data.code_000905.close);
+                })
             </script>
         </div>
     </body>

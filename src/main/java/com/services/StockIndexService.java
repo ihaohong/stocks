@@ -23,7 +23,7 @@ public class StockIndexService {
 
         for (StockIndex stockIndex:
              stockIndices) {
-            data.put(stockIndex.getCode(), stockIndex);
+            data.put("code_" + stockIndex.getCode(), stockIndex);
         }
 
         Map<String, Map<String, StockIndex>> result = new HashMap<String, Map<String, StockIndex>>();
